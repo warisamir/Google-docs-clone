@@ -1,12 +1,37 @@
-import React from 'react';
-import styled from 'styled-components';
+import React,{ Component} from 'react';
+import styled, { css } from 'styled-components';
 
-const Tool = ({children, executeCommand}) => {
-    return ( 
-        <Button onClick={executeCommand}>
-            {children}
-        </Button>
-     );
+import ToolExpanded from './ToolExpanded';
+
+class Tool extends Component {
+
+    state = {
+        expandable: false,
+        isExpanded: false
+    }
+
+    handleClick = () => {
+        if(this.props.expandable) {
+            let expanded = this.state.isExpanded;
+            this.setState({isExpanded: !expanded});
+        } else {
+            this.props.executeCommand();
+        }
+    }
+
+    render(){
+        return ( 
+            <div style={{position:'relative'}}>
+                <Button active={this.state.isExpanded} onClick={this.handleClick}>
+                            {this.props.children}
+                </Button>
+                {
+                    this.state.isExpanded ? <ToolExpanded closeExpanded={this.handleClick} type={this.props.type} isExpanded={this.state.isExpanded} /> : null
+                }
+            </div>
+         );
+    }
+    
 }
 
 const Button = styled.button`
@@ -16,6 +41,10 @@ const Button = styled.button`
     border-radius: 2px;
     color: #767676;
     cursor: pointer;
+    ${props => props.active && css`
+        background: #eeeeee;
+        color: black;
+    `}
 
     &:hover {
         background: #eeeeee;

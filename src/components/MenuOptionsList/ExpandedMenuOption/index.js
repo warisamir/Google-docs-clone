@@ -14,12 +14,12 @@ class ExpandedMenuOption extends Component {
     }
 
     closeMenu = () => {
-        this.props.closeMenu();
+        this.props.toggleMenu();
     }
 
     render() {
         return ( 
-            <ExpandedOption onBlur={() => console.log('blurred')}>
+            <ExpandedOption>
                 <MenuCommands commands={this.props.commands} />
             </ExpandedOption>
          );
@@ -36,7 +36,7 @@ const ExpandedOption = styled.div`
     box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
     border-radius: 2px;
     border: 1px solid #c3c3c3;
-    z-index: -1;
+    
     
 `;
  

@@ -44,7 +44,7 @@ const EditorToolbar = () => {
                 <Tool executeCommand={() => executeCommand('underline', null)}>
                     <MdFormatUnderlined size={iconSize} />
                 </Tool>
-                <Tool>
+                <Tool expandable type="colorPicker">
                     <MdFormatColorText size={iconSize} />
                 </Tool>
             </Section>

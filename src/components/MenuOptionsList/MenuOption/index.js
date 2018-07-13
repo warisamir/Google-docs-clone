@@ -8,7 +8,7 @@ class MenuOption extends Component {
         isExpanded: false
     }
 
-    expandMenu = () => {
+    toggleMenu = () => {
         let expanded = this.state.isExpanded; 
         this.setState({isExpanded: !expanded });
     }
@@ -18,13 +18,13 @@ class MenuOption extends Component {
             <Option>
                 <Title 
                     expanded={this.state.isExpanded}
-                    onClick={this.expandMenu}
+                    onClick={this.toggleMenu}
                     
                 >
                     {this.props.title}
                 </Title>
                 {
-                    this.state.isExpanded ? <ExpandedMenuOption commands={this.props.commands} closeMenu={this.expandMenu} /> : null
+                    this.state.isExpanded ? <ExpandedMenuOption commands={this.props.commands} toggleMenu={this.toggleMenu} /> : null
                 }
             </Option>
          );
