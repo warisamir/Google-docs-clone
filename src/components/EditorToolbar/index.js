@@ -13,6 +13,8 @@ import {
     MdFormatItalic,
     MdFormatUnderlined,
     MdFormatColorText,
+    MdEdit,
+    MdArrowDropDown
 } from 'react-icons/lib/md/';
 
 
@@ -27,7 +29,7 @@ const EditorToolbar = () => {
                 <Tool>
                     <MdRedo size={iconSize} />
                 </Tool>
-                <Tool>
+                <Tool executeCommand={() => window.print()}>
                     <MdLocalPrintShop size={iconSize} />
                 </Tool>
                 <Tool>
@@ -44,8 +46,16 @@ const EditorToolbar = () => {
                 <Tool executeCommand={() => executeCommand('underline', null)}>
                     <MdFormatUnderlined size={iconSize} />
                 </Tool>
-                <Tool expandable type="colorPicker">
+                <Tool expandable type="colorPicker" executeCommand={(color) => executeCommand('foreColor', color)}>
                     <MdFormatColorText size={iconSize} />
+                </Tool>
+                <Tool expandable type="colorPicker" executeCommand={(color) => executeCommand('hiliteColor', color)}>
+                    <MdEdit size={iconSize} />
+                </Tool>
+            </Section>
+            <Section>
+                <Tool expandable type="fontStyleList" executeCommand={(size, color) => executeCommand('changeFontStyle', {size, color})}>
+                    Normal Font <MdArrowDropDown size="14" />
                 </Tool>
             </Section>
         </Toolbar>

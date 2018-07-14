@@ -26,7 +26,13 @@ class Tool extends Component {
                             {this.props.children}
                 </Button>
                 {
-                    this.state.isExpanded ? <ToolExpanded closeExpanded={this.handleClick} type={this.props.type} isExpanded={this.state.isExpanded} /> : null
+                    this.state.isExpanded ? 
+                    <ToolExpanded 
+                        executeCommand={this.props.executeCommand} 
+                        closeExpanded={this.handleClick} 
+                        type={this.props.type} 
+                        listData={this.props.listData}
+                        isExpanded={this.state.isExpanded} /> : null
                 }
             </div>
          );
@@ -41,6 +47,8 @@ const Button = styled.button`
     border-radius: 2px;
     color: #767676;
     cursor: pointer;
+    font-size: 10px;
+    font-weight: bold;
     ${props => props.active && css`
         background: #eeeeee;
         color: black;

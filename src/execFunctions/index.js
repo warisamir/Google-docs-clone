@@ -1,4 +1,11 @@
 export function executeCommand(command, arg) {
-    console.log(command, arg);
-    document.execCommand(command, null, arg);
+    switch(command) {
+        case 'changeFontStyle':
+            document.execCommand('foreColor', null, arg.color);  
+            document.execCommand('fontSize', null, arg.size)
+            break;
+        default:
+            document.execCommand(command, null, arg);
+    }
+    
 }   

@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import Logo from '../Logo';
 import DocumentTitle from '../DocumentTitle';
@@ -9,7 +9,7 @@ import EditorToolbar from '../EditorToolbar';
 
 const Topbar = () => {
     return ( 
-        <div style={{position: 'absolute', width: '100%'}}>
+        <Div noPrint>
             <Wrapper>
                 <HorizontalPanel>
                     <Logo />    
@@ -23,10 +23,20 @@ const Topbar = () => {
                 </div>
             </Wrapper>
             <EditorToolbar />    
-        </div>
+        </Div>
         
      );
 }
+
+const Div = styled.div`
+    position: absolute;
+    width: 100%;
+    @media print {
+        ${props => props.noPrint && css`
+          display: none;
+        `}
+      }
+`;
 
 const HorizontalPanel = styled.div`
     display: flex;

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import ColorPicker from '../../../ColorPicker';
+import FontStyleList from '../../../FontStyleList';
 
 class ToolExpanded extends Component {
 
@@ -17,11 +18,22 @@ class ToolExpanded extends Component {
         this.props.closeExpanded();
     }
 
+    checkType = () => {
+        switch(this.props.type) {
+            case 'colorPicker':
+                return <ColorPicker executeCommand={this.props.executeCommand} />
+            case 'fontStyleList':
+                return <FontStyleList executeCommand={this.props.executeCommand} />
+            default:
+                return null;
+        }
+    }
+
     render() {
         if(this.props.isExpanded) {
             return (
                 <Expanded>
-                    <ColorPicker />
+                    {this.checkType()}
                 </Expanded>
             )
         }

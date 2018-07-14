@@ -1,15 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { executeCommand } from  '../../../execFunctions';
-
-const Section = ({colors}) => {
+const Section = ({colors, executeCommand}) => {
     return ( 
         <ColorsSection>
             {
                 colors.map(color => {
                     return (
-                        <Color key={color} onClick={() => executeCommand('foreColor', color)} hex={color} />
+                        <Color key={color} onClick={() => executeCommand(color)} hex={color} />
                     )
                 })
             }

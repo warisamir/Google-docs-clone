@@ -16,6 +16,11 @@ const Wrapper = styled.div`
     height: 100vh;
     overflow: scroll;
     background: #eeeeee;
+
+    @media print {
+        height: 100%;
+        overflow: hidden;
+      }
 `;
  
 export default Editor;
