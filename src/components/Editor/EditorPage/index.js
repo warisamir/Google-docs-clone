@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const EditorPage = () => {
     return ( 
-        <Page contentEditable>
+        <Page id="page" contentEditable>
 
         </Page>
      );

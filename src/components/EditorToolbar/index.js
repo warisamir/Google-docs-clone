@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 import Tool from './Tool';
 
-import unLink from './link.png';
 import {
     MdUndo,
     MdRedo,
@@ -25,7 +24,8 @@ import {
     MdFormatListNumbered,
     MdFormatListBulleted,
     MdFormatIndentIncrease,
-    MdFormatIndentDecrease
+    MdFormatIndentDecrease,
+    MdFormatClear
 } from 'react-icons/lib/md/';
 
 
@@ -139,6 +139,11 @@ class EditorToolbar extends Component {
                     </Tool>
                     <Tool executeCommand={() => this.executeCommand('indent')}>
                         <MdFormatIndentIncrease size={iconSize} />
+                    </Tool>
+                </Section>
+                <Section>
+                    <Tool executeCommand={() => this.executeCommand('removeFormat')}>
+                        <MdFormatClear size={iconSize} />
                     </Tool>
                 </Section>
             </Toolbar>

@@ -7,7 +7,7 @@ const MenuSection = ({commands}) => {
     return ( 
         <Section>
             {
-                commands.list.map(command => <MenuCommand key={command.name} commandName={command.name} />)
+                commands.list.map(command => <MenuCommand key={command.name} commandName={command.name} command={command.command} type={command.type}/>)
             }
         </Section>
      );
