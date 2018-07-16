@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import ColorPicker from '../../../ColorPicker';
 import FontStyleList from '../../../FontStyleList';
+import FontSizeList from '../../../FontSizeList';
 
 class ToolExpanded extends Component {
 
@@ -24,6 +25,8 @@ class ToolExpanded extends Component {
                 return <ColorPicker executeCommand={this.props.executeCommand} />
             case 'fontStyleList':
                 return <FontStyleList executeCommand={this.props.executeCommand} />
+            case 'fontSizeList':
+                return <FontSizeList executeCommand={this.props.executeCommand} />
             default:
                 return null;
         }

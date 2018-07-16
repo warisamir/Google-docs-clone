@@ -18,6 +18,12 @@ const Page = styled.div`
     box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
     border-radius: 2px;
     font-size: 16px;
+
+    > img {
+        width: 100%;
+        height: auto;
+    }
+
     &:focus {
         outline: none;
     }

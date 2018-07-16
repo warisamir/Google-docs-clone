@@ -3,8 +3,7 @@ import styled from 'styled-components';
 
 import { fontStyles } from '../../data/fontStyles';
 
-const FontStyleList = ({executeCommand}) => {
-    
+const FontStyleList = ({executeCommand}) => {   
     return ( 
         <div>
             {
@@ -13,7 +12,7 @@ const FontStyleList = ({executeCommand}) => {
                     key={style.name} 
                     color={style.color} 
                     size={style.size}
-                    onClick={() => executeCommand(style.size, style.color)}
+                    onClick={() => executeCommand(style.size, style.color, style.name)}
                 > 
                 {style.name} 
                 </Button>)
