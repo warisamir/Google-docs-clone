@@ -4,7 +4,6 @@ import styled, { css } from 'styled-components';
 import Logo from '../Logo';
 import DocumentTitle from '../DocumentTitle';
 import Button from '../Button';
-import MenuOptionsList from '../MenuOptionsList';
 import EditorToolbar from '../EditorToolbar';
 
 const Topbar = () => {
@@ -15,11 +14,11 @@ const Topbar = () => {
                     <Logo />    
                     <VerticalPanel style={{margin: '0px 15px'}}>
                         <DocumentTitle />
-                        <MenuOptionsList />
+                     
                     </VerticalPanel>      
                 </HorizontalPanel>
                 <div>
-                    <Button>Save</Button>
+                    <Button>Share</Button>
                 </div>
             </Wrapper>
             <EditorToolbar />    

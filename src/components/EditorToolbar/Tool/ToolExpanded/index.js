@@ -48,7 +48,7 @@ class ToolExpanded extends Component {
 const Expanded = styled.div`
     position: absolute;
     left: 0;
-    min-width: 180px;
+    min-width: 190px;
     background white;
     box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
     border: 1px solid #c3c3c3;

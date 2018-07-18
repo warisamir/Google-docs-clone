@@ -107,6 +107,96 @@ const Options = [
             },
         ]
     },
+    {
+        name: "View",
+        commands: [
+            {
+                list: [
+                        {
+                            name: "Print layout",
+                            command: null,
+                            type: 'button'
+                        },
+                        {
+                            name: "Mode",
+                            command: null,
+                            type: 'button'
+                        },
+                    ],
+            },
+            {
+                list: [
+                    {
+                        name: "Show ruler",
+                        command: null,
+                        type: 'button'
+                    },
+                    {
+                        name: "Show document outline",
+                        command: null,
+                        type: 'button'
+                    },
+                    {
+                        name: "Show Equation toolbar",
+                        command: null,
+                        type: 'button'
+                    }
+                ],
+                list: [
+                    {
+                        name: "Full screen",
+                        command: null,
+                        type: 'button'
+                    },
+                ]
+            },
+        ]
+    },
+    {
+        name: "Insert",
+        commands: [
+            {
+                list: [
+                        {
+                            name: "Image",
+                            command: null,
+                            type: 'button'
+                        },
+                        {
+                            name: "Table",
+                            command: null,
+                            type: 'button'
+                        },
+                    ],
+            },
+            {
+                list: [
+                    {
+                        name: "Show ruler",
+                        command: null,
+                        type: 'button'
+                    },
+                    {
+                        name: "Show document outline",
+                        command: null,
+                        type: 'button'
+                    },
+                    {
+                        name: "Show Equation toolbar",
+                        command: null,
+                        type: 'button'
+                    }
+                ],
+                list: [
+                    {
+                        name: "Full screen",
+                        command: null,
+                        type: 'button'
+                    },
+                ]
+            },
+        ]
+    },
 
 ]
 
