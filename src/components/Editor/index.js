@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import './textStyles.css';
 import EditorPage from './EditorPage';
 
-const Editor = () => {
-    return ( 
-        <Wrapper>
-          <EditorPage />  
-        </Wrapper>
-     );
+class Editor extends Component {
+    render() {
+        return ( 
+            <Wrapper>
+              <EditorPage />  
+            </Wrapper>
+         );
+    }    
 }
 
 const Wrapper = styled.div`

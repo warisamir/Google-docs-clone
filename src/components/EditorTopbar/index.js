@@ -14,7 +14,7 @@ const Topbar = () => {
                     <Logo />    
                     <VerticalPanel style={{margin: '0px 15px'}}>
                         <DocumentTitle />
-                     
+                        
                     </VerticalPanel>      
                 </HorizontalPanel>
                 <div>

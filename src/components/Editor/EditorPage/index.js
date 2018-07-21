@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const EditorPage = () => {
-    return ( 
-        <Page id="page" contentEditable>
+class EditorPage extends Component {
 
-        </Page>
-     );
+    render() {
+        return ( 
+            <Page id="page" contentEditable>
+            
+            </Page>
+         );
+    }
+    
 }
 
 const Page = styled.div`
