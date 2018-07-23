@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 import {
-    MdMenu
+    MdMenu,
+    MdApps,
+    MdNotifications
 } from 'react-icons/lib/md/';
 import SearchBar from '../SearchBar';
 
@@ -15,7 +17,13 @@ const DashboardTopbar = () => {
                 <SearchBar />
             </Section>
             <Section>
-                Right
+                <div style={{margin: '0 10px'}}>
+                    <MdApps size="25" color="white" />
+                </div>
+                <div style={{margin: '0 10px'}}>
+                    <MdNotifications size="25" color="white" />
+                </div>
+                
             </Section>
         </Topbar>
      );

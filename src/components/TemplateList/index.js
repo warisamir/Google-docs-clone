@@ -5,7 +5,10 @@ import TemplateItem from './TemplateItem';
 
 const TemplateList = () => {
     return ( 
+            
         <Wrapper>
+            <h5 style={{margin: 0, fontSize: '14px', color: '#c6d2db'}}>Start a new document</h5>
+            <div style={{display: 'flex', flexDirection: 'row'}}>
             <TemplateItem 
                 blank
             
@@ -34,14 +37,17 @@ const TemplateList = () => {
                 theme="Ocean"
             
             />
-        </Wrapper>
+            </div>
+           
+        </Wrapper> 
      );
 }
 
 const Wrapper = styled.div`
-    height: 298px;
-    background: #424249;
+    height: 310px;
     display: flex;
+    background: #424249;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 `;
