@@ -13,7 +13,7 @@ const DashboardTopbar = () => {
         <Topbar>
             <Section>
                 <MdMenu size="25" color="white" />
-                <h2 style={{fontWeight: 500, padding: '0px 25px'}}>Noodle Docs</h2>
+                <h2 style={{fontWeight: 500, padding: '0px 25px'}}>Goodle Docs</h2>
                 <SearchBar />
             </Section>
             <Section>
