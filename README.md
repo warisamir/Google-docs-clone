@@ -11,7 +11,9 @@ The user selects some text inside of the contentEditable element, and calls diff
 # Technologies Used
 For building the user interface and various interactions, **ReactJS** was used. This JavaScript library was used to build the entire app along with the help of create-react-app to bootstrap the application.
 
-Styling of the React components was done using the styling library **styled-components** along with some inline styling. You can learn more about styling React components via my article where I describe the various methods that are used: [https://medium.com/@darrion/4-ways-to-style-react-components-707e4f1ae410]
+Styling of the React components was done using the styling library **styled-components** along with some inline styling. You can learn more about styling React components via my article where I describe the various methods that are used: 
+these are few step how u can make 
+
 
 # Installation
 
